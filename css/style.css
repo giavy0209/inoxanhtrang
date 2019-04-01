@@ -1,0 +1,703 @@
+/*
+	00. RESET CSS
+	00. General
+	01. Header
+	02. Menu
+	03. Footer
+	04. Sidebar
+	05. Main Content
+	06. Product
+*/
+
+
+
+/*=========== 00. RESET CSS ================ */	
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	:before, :after  {
+		box-sizing: border-box;
+	}
+	a, span, :before, :after { 
+		display: inline-block; 
+	}
+	:focus {
+		outline: none;
+	}
+	ul {
+		list-style-type: none;
+	}
+	a {
+		text-decoration: none;
+		-webkit-transition: all .3s ease;
+		-o-transition: all .3s ease;
+		transition: all .3s ease;
+	}
+	img {
+		max-width: 100%;
+	}
+
+	body {
+		font-size: 14px;
+		font-family: 'Roboto', sans-serif;
+		line-height: 1.285;
+		color: #555;
+		font-weight: 400;
+		min-height: 2000px;
+		background-image: url("../images/bg.jpg");
+	}
+	
+	.container {
+		width: 1170px;
+		margin: 0 auto;
+	}
+
+	.demo {
+		height: 500px;
+		background-color: #fff;
+	}
+
+/*=========== 00. General ================ */	
+	.row {
+		font-size: 0;
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	.row [class*="tcl-col-"],
+	.row[class*="tcl-column-"] .item {
+		padding-left: 15px;
+		padding-right: 15px;
+		display: inline-block;
+		vertical-align: top;
+		font-size: 14px;
+	}
+	/*.row[class*="tcl-column-"] .item {
+		margin-top: 30px;
+	}*/
+	/*.row[class*="tcl-column-"] .item {
+
+	}*/
+	.tcl-col-9 {
+		width: 75%;
+	}
+	.tcl-col-3 {
+		width: 25%;
+	}
+
+	.row.va-m [class*="tcl-col-"] {
+		vertical-align: middle;
+	}
+
+	
+	.tcl-column-5 .item {
+		width: 20%;
+	}
+	.tcl-column-5 .item:not(:nth-child(-n + 5)) {
+		margin-top: 30px;
+	}
+
+	.tcl-column-4 .item {
+		width: 25%;
+	}
+	.tcl-column-4 .item:not(:nth-child(-n + 4)) {
+		margin-top: 30px;
+	}
+
+	.tcl-column-3 .item {
+		width: 33.3333%;
+	}
+	.tcl-column-3 .item:not(:nth-child(-n + 3)) {
+		margin-top: 30px;
+	}
+
+	.tcl-column-2 .item {
+		width: 50%;
+	}
+	.tcl-column-2 .item:not(:nth-child(-n + 2)) {
+		margin-top: 30px;
+	}
+
+	.clear::after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+	.input-group {
+		position: relative;
+	}
+	.input-group input {
+		border: 1px solid #dbdbdb;
+		height: 35px;
+		padding: 0 40px 0 13px;
+		width: 100%;
+		border-radius: 5px;
+		font-size: 13px;
+		color: #999;
+		-webkit-transition: all .3s ease;
+		-o-transition: all .3s ease;
+		transition: all .3s ease;
+	}
+	.input-group input:focus {
+		border-color: #333;
+	}
+	.input-group .icons {
+		position: absolute;
+		font-size: 15px;
+		color: #999;
+		right: 13px;
+		top: 10px;
+	}
+	.text-c {
+		text-align: center;
+	}
+
+/*=========== 01. Header ================ */	
+	.top-header {
+		color: #0c8597;
+		font-size: 13px;
+		font-weight: 500;
+		padding: 12px 0;
+		border-bottom: 1px solid #eaeaea;
+		text-transform: uppercase; /* Chu in hoa */
+	}
+	.header {
+		padding: 6px 0;
+	}
+	.header .logo {
+		width: 130px;
+	}
+	.header .hotline {
+		width: calc(100% - 130px);
+		font-size: 16px;
+		text-align: right;
+	}
+	.header .logo, .header .hotline {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.header .hotline img,
+	.header .hotline p {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.header .hotline span {
+		color: #f9100b;
+		font-size: 22px;
+		font-weight: 700;
+	}
+	.header .wrapper-logo {
+		font-size: 0;
+	}
+
+/*=========== 02. Menu ================ */
+	.menu {
+		margin-bottom: 15px;
+		background-color: rgba(0,0,0,0.1);
+		border-bottom: 2px solid #cb672e;
+	}
+	.menu > li {
+		float: left;
+	}
+	.menu li {
+		position: relative;
+	}
+	.menu a {
+		display: block;
+		font-size: 16px;
+		color: #cb672e;
+		font-weight: 700;
+		text-transform: uppercase;
+		padding: 11px 25px 7px 25px;
+	}
+	.menu li:hover > a,
+	.menu .active > a {
+		color: #fff;
+		background-color: #cb672e;
+	}
+	/* Trong html .menu chinh la ul. .menu ul => Truy xuat vao tat ca ul tu cap thu 2 tro di */
+	.menu ul {
+		position: absolute;
+		width: 230px;
+		background-color: #fff;
+		box-shadow: 1px 1px 15px 0 rgba(0,0,0,0.2);
+		top: 72px;
+		left: 0;
+		z-index: 99;
+		opacity: 0; /* Chỉ ẩn đi về mặt giao diện. Vẫn còn tồn tại ở vị trí -> User vẫn thao tác được  */
+		pointer-events: none; /* Disable luôn tất cả các thao tác của user (Hover, Click chuột, ..) */
+		-webkit-transition: all .3s ease;
+		-o-transition: all .3s ease;
+		transition: all .3s ease;
+	}
+	/*.menu>li>ul {
+		border-top: 2px solid #cb672e;
+	}*/
+	.menu>li>ul:before {
+		content: '';
+		position: absolute;
+		height: 2px;
+		width: 100%;
+		top: -2px;
+	}
+	.menu li:hover > ul {
+		opacity: 1;
+		top: 40px;
+		pointer-events: auto;
+	}
+
+	
+	/*ul ul ul {}*/
+	.menu ul ul {
+		top: 0;
+		left: 100%;
+	}
+	.menu ul li:hover > ul {
+		top: 0;
+	}
+	
+
+	/*
+		ul
+			ul
+				ul
+					ul
+		
+		ul ul ul {
+		
+		}
+
+
+
+		li (li root)
+			a
+			ul
+				li
+					a
+					ul
+						li -> Khi hover vao li nay -> Cung dong nghia voi viec hover vao li root
+							a
+							ul 
+		|||a -> height 40px
+		--------- -> 2px
+		|||ul -> top 42px
+	*/
+
+/*=========== 03. Footer ================ */
+	footer {
+		margin-top: 50px;
+		background-color: #fff;
+	}
+	.footer .widgets {
+		padding-top: 40px;
+	}
+	.footer-bottom {
+		color: #fff;
+		margin-top: 25px;
+		position: relative;
+		background-color: #323232;
+	}
+	.footer-bottom p {
+		padding: 11px 0;
+	}
+
+	.footer-bottom .hot-line {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		font-size: 29px;
+		font-weight: bold;
+		background-color: red;
+		padding: 2px 14px;
+	}
+	.footer-bottom .hot-line .icons {
+		font-size: 23px;
+		margin-right: 12px;
+	}
+	
+	.widgets .widget-title {
+		color: #323232;
+		font-size: 16px;
+		position: relative;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	}
+	.widgets .widget-title::after {
+		content: '';
+		display: block;
+		width: 40px;
+		height: 2px;
+		margin-top: 2px;
+		background-color: #ccc;
+	}
+
+	.widget-content p + p {
+		margin-top: 5px;
+	}
+	.widget-content li + li {
+		margin-top: 7px;
+	}
+	.widget-content .icons {
+		font-size: 12px;
+		width: 20px;
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 3px;
+	}
+	.widget-content .icons + span {
+		width: calc(100% - 20px);
+		vertical-align: top;
+	}
+
+	.widget-category a {
+		color: #555;
+		width: calc(100% - 14px);
+	}
+	.widget-category li:before {
+		content: '';
+		width: 4px;
+		height: 4px;
+		background-color: #555;
+		border-radius: 50%;
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 10px;
+		margin-top: 7px;
+		-webkit-transition: all .3s ease;
+		-o-transition: all .3s ease;
+		transition: all .3s ease;
+	}
+	.widget-category li:hover:before {
+		background-color: #cb672e;
+	}
+	.widget-category li:hover a {
+		color: #cb672e;
+	}
+
+/*=========== 04. Sidebar ================ */
+	.widgets + .widgets {
+		margin-top: 15px;
+	}
+	.widgets.style-02 .widget-title::after {
+		content: none;
+	}
+	.widgets.style-02 {
+		background-color: #fff;
+		box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.1);
+	}
+	.widgets.style-02 .widget-content {
+		padding: 0 15px 15px;
+	}
+	.style-02 .widget-title {
+		color: #fff;
+		padding: 12px 28px 8px 10px;
+		font-weight: 700;
+		text-transform: uppercase;
+		background-color: #cb672e;
+	}
+	.style-02 .widget-title::before {
+		content: "\f138";
+		font-weight: 900;
+		position: absolute;
+		right: 13px;
+		font-size: 14px;
+		font-family: "Font Awesome 5 Free";
+		top: calc(50% - 7px);
+		display: block;
+	}
+	/*.style-02 */
+	
+	.widget-support li {
+		display: table;
+		width: 100%;
+	}
+	/*.widget-support li .left, .widget-support li .right {
+		display: table-cell;
+	}*/
+	.widget-support li > * {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.widget-support li .left {
+		width: 50%;
+		font-weight: 500;
+	}
+	.widget-support li .right {
+		color: #f9100b;
+		font-weight: 700;
+	}
+	.widget-support .icons {
+		font-size: 16px;
+		margin-top: 0;
+	}
+	
+
+
+	.widget-blogs .post-block .block-content {
+		display: table;
+	}
+	.widget-blogs .post-block .block-content > * {
+		display: table-cell;
+		vertical-align: top;
+	}
+	.widget-blogs .post-block .image {
+		width: 30%;
+		border: 1px solid #ccc;
+	}
+	.widget-blogs .post-block .title a {
+		font-size: 14px;
+		font-weight: 500;
+		color: #323232;
+		padding-left: 10px;
+	}
+	.widget-blogs .post-block .title a:hover {
+		color: #cb672e;
+	}
+	.widget-blogs .post-block .des {
+		margin-top: 10px;
+	}
+	.widget-blogs .post-block + .post-block {
+		margin-top: 10px;
+		padding-top: 10px;
+		border-top: 1px dashed #ccc;
+	}
+	
+
+	.widget-fanpage .widget-title {
+		margin-bottom: 0;
+	}
+	.widgets.style-02.widget-fanpage .widget-content {
+		padding: 0;
+	}
+
+	.widget-category2 a {
+		color: #323232;
+		font-weight: 500;
+	}
+	.widget-category2 a:hover {
+		color: #cb672e;
+	}
+	.widget-category2 li + li {
+		margin-top: 15px;
+	}
+	.widget-category2.style-02 .widget-content {
+		padding-bottom: 25px;
+	}
+
+/*=========== 05. Main Content ================ */
+	.wrapper-content {
+		padding: 15px;
+		padding-bottom: 40px;
+		min-height: 1000px;
+		background-color: #fff;
+		box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.1);
+	}
+
+	.welcome {
+		margin-top: 56px;
+	}
+	.welcome .title {
+		color: #323232;
+		font-size: 24px;
+		font-weight: 400;
+		margin-bottom: 15px;
+	}
+	.welcome p + p {
+		margin-top: 20px;
+	}
+	.welcome .link {
+		color: #cb672e;
+	}
+	
+
+	.ad {
+		margin-top: 32px;
+	}
+	.ad .title {
+		color: #56a6b2;
+		font-size: 36px;
+		font-weight: 500;
+	}
+	.ad .sub-title {
+		color: #f51b1b;
+		font-size: 24px;
+		font-weight: 500;
+		margin-top: 20px;
+	}
+	
+	.comment {
+		margin-left: -8px;
+		margin-right: -8px;
+		margin-top: 40px;
+	}
+	.comment h1 {
+		padding: 0 8px;
+		font-size: 18px;
+		color: #323232;
+		text-transform: uppercase;
+	}
+	.comment iframe {
+		width: 100% !important;
+	}
+
+	
+	.breadcrumb {
+		padding-bottom: 7px;
+	    margin-bottom: 25px;
+	    border-bottom: 1px solid #eee;
+	}
+	.breadcrumb a {
+		color: #999;
+	}
+	.breadcrumb li {
+		display: inline-block;
+	}
+	.breadcrumb li + li::before {
+		content: "\f101";
+	    font-weight: 900;
+	    color: #999;
+	    font-size: 12px;
+	    margin-left: 3px;
+	    margin-right: 5px;
+	    font-family: "Font Awesome 5 Free";
+	}
+	.breadcrumb li:hover a {
+		color: #cb672e;
+	}
+	.breadcrumb li:last-child {
+		pointer-events: none;
+	}
+
+	.content-header .title {
+		font-size: 24px;
+		color: #323232;
+		font-weight: 400;
+		margin-bottom: 4px;
+	}
+	
+	.select-box {
+		margin-bottom: 25px;
+		text-align: right;
+	}
+	.select-box::after {
+		content: '';
+		display: block;
+		height: 5px;
+		margin-top: 5px;
+		background-image: url("../images/border.png");
+	}
+	.select-box select {
+		width: 180px;
+		padding: 6px 15px;
+		border-radius: 5px;
+		border: 1px solid #eee;
+		display: inline-block;
+	}
+	
+/*=========== 06. Product ================ */
+	.wrapper-products {
+		margin-top: 45px;
+	}
+
+	.title-product {
+		position: relative;
+		color: #fff;
+		margin-bottom: 15px;
+		font-weight: 700;
+		font-size: 16px;
+		text-transform: uppercase;
+		background-color: #d36b30;
+		padding: 12px 30px 8px 30px;
+	}
+	.title-product::after {
+		content: '';
+		position: absolute;
+		width: 6px;
+		height: 6px;
+		top: 10px;
+		left: 10px;
+		border-radius: 50%;
+		background-color: #fff;
+	}
+	.title-product::before {
+		content: '';
+		top: 0;
+		left: 0;
+		border-top: 15px solid #fff;
+		border-right: 15px solid transparent;
+		position: absolute;
+	}
+
+	.product h1 {
+		text-align: center;
+		font-size: 14px;
+		font-weight: 500;
+		margin-top: 12px;
+	}
+	.product h1 a {
+		color: #323232;
+	}
+	.product h1 a:hover {
+		color: #cb672e;
+	}
+	.product .img {
+		border: 1px solid #dbdbdb;
+		display: block;
+		position: relative;
+	}
+	.product .img::before {
+		content: '';
+		display: block;
+		padding-top: 100%; /* Tỉ lệ height / width */
+		background-color: red;
+	}
+	/* Tất cả những phần tử nào cùng cấp before -> Đều đưa về absolute  */
+	.product .img img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	/*
+	Cach xu li hinh anh trong HTML, CSS
+
+	1. Hình ảnh chạy theo khung.
+		Cố định khung theo một tỉ lệ nào dó -> Tất cả hình ảnh có chung kích thước.
+		Không được phép cố định height -> Không đúng tỉ lệ cho những màn hình khác.
+		- Khung luôn luôn cố định theo một tỉ lệ nhất định (Tỉ lệ 1-1. Width luôn luôn = height với mọi màn hình)
+		=> Dùng before after đẻ tạo ra một khung ảo. Nó ràng buộc nhau theo tính chất cầu.
+		.img -> Chạy theo before của nó
+		<img> -> Chạy theo parent (class .img)
+		-> <img> chạy theo before
+
+
+	2. Cho khung chạy theo hình ảnh.
+		Cố định width. Height auto -> Height của tấm hình là bao nhiêu -> Khung sẽ là bấy nhiêu.
+	*/
+	.product .img::after {
+		content: '';
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		right: 15px;
+		bottom: 15px;
+		background-color: rgba(51,51,51,0);
+		transition: all .3s ease;
+	}
+	.product:hover .img::after {
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(51,51,51,0.2);
+	}
+
+
+
+
+

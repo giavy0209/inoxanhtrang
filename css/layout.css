@@ -1,0 +1,36 @@
+/*=========== 00. Product Detail ================ */	
+	.main-title {
+		margin-top: 25px;
+		font-size: 16px;
+		color: #323232;
+		font-weight: 700;
+		position: relative;
+		margin-bottom: 30px;
+		text-transform: uppercase;
+	}
+
+	.main-title::after {
+		content: '';
+		display: block;
+		height: 3px;
+		background-image: url("../images/border.png");
+	}
+	.main-title::before {
+		content: '';
+		width: 70px;
+		height: 3px;
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		background-color: #cb672e;
+	}
+
+	.des-detail p {
+		margin-top: 20px;
+	}
+	.des-detail img {
+		display: block;
+		margin-top: 20px;
+		margin-left: auto;
+		margin-right: auto;
+	}
