@@ -1,2 +1,0 @@
-Ctrl + H: Bat tat line mau xanh (grid system)
-Ctrl + J: Tao mot layer moi

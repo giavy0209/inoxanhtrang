@@ -1,15 +1,3 @@
-/*
-	00. RESET CSS
-	00. General
-	01. Header
-	02. Menu
-	03. Footer
-	04. Sidebar
-	05. Main Content
-	06. Product
-*/
-
-
 
 /*=========== 00. RESET CSS ================ */	
 	* {
@@ -65,57 +53,57 @@
 		margin-left: -15px;
 		margin-right: -15px;
 	}
-	.row [class*="tcl-col-"],
-	.row[class*="tcl-column-"] .item {
+	.row [class*="hm-col-"],
+	.row[class*="hm-column-"] .item {
 		padding-left: 15px;
 		padding-right: 15px;
 		display: inline-block;
 		vertical-align: top;
 		font-size: 14px;
 	}
-	/*.row[class*="tcl-column-"] .item {
+	/*.row[class*="hm-column-"] .item {
 		margin-top: 30px;
 	}*/
-	/*.row[class*="tcl-column-"] .item {
+	/*.row[class*="hm-column-"] .item {
 
 	}*/
-	.tcl-col-9 {
+	.hm-col-9 {
 		width: 75%;
 	}
-	.tcl-col-3 {
+	.hm-col-3 {
 		width: 25%;
 	}
 
-	.row.va-m [class*="tcl-col-"] {
+	.row.va-m [class*="hm-col-"] {
 		vertical-align: middle;
 	}
 
 	
-	.tcl-column-5 .item {
+	.hm-column-5 .item {
 		width: 20%;
 	}
-	.tcl-column-5 .item:not(:nth-child(-n + 5)) {
+	.hm-column-5 .item:not(:nth-child(-n + 5)) {
 		margin-top: 30px;
 	}
 
-	.tcl-column-4 .item {
+	.hm-column-4 .item {
 		width: 25%;
 	}
-	.tcl-column-4 .item:not(:nth-child(-n + 4)) {
+	.hm-column-4 .item:not(:nth-child(-n + 4)) {
 		margin-top: 30px;
 	}
 
-	.tcl-column-3 .item {
+	.hm-column-3 .item {
 		width: 33.3333%;
 	}
-	.tcl-column-3 .item:not(:nth-child(-n + 3)) {
+	.hm-column-3 .item:not(:nth-child(-n + 3)) {
 		margin-top: 30px;
 	}
 
-	.tcl-column-2 .item {
+	.hm-column-2 .item {
 		width: 50%;
 	}
-	.tcl-column-2 .item:not(:nth-child(-n + 2)) {
+	.hm-column-2 .item:not(:nth-child(-n + 2)) {
 		margin-top: 30px;
 	}
 
